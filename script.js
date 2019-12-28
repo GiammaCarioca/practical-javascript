@@ -61,8 +61,11 @@ const todoList = {
   }
 }
 
-const displayTodosButton = document.getElementById('displayTodosButton');
-const toggleAllButton = document.getElementById('toggleAllButton');
-
-displayTodosButton.addEventListener('click', () => todoList.displayTodos());
-toggleAllButton.addEventListener('click', () => todoList.toggleAll());
+const handlers = {
+  displayTodos: function() {
+    todoList.displayTodos();
+  },
+  toggleAll: function() {
+    todoList.toggleAll();
+  }
+};
